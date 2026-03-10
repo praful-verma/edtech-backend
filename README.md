@@ -1,73 +1,73 @@
-# 📚 EdTech Learning Platform – Backend System
+# EdTech Learning Platform – Backend
 
-A scalable backend system for an **EdTech Learning Platform** designed to manage users, courses, and learning content efficiently. The system provides secure authentication, role-based authorization, and RESTful APIs to support a modern online learning environment.
+This project is the **backend system of an EdTech learning platform** where users can register, login, and manage courses. The backend handles user authentication, course management, and secure APIs for accessing learning content.
+
+The goal of this project was to build a **scalable and secure backend using Node.js and Express** while working with MongoDB as the database.
 
 ---
 
-## 🚀 Features
+## Features
 
 * User registration and login system
-* JWT-based authentication for secure access
-* Role-based authorization for **students and instructors**
+* JWT based authentication
+* Role based access for **students and instructors**
 * Course creation and management
-* Learning content management
-* Secure RESTful API architecture
-* Middleware-based request validation
-* Scalable backend structure
+* Secure REST APIs
+* Middleware based authentication and request validation
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-* **Backend:** Node.js, Express.js
-* **Database:** MongoDB Atlas
-* **Database Tool:** MongoDB Compass
-* **Authentication:** JSON Web Tokens (JWT)
-* **API Architecture:** REST APIs
-* **Version Control:** Git, GitHub
+* **Node.js**
+* **Express.js**
+* **MongoDB Atlas**
+* **MongoDB Compass**
+* **JWT (JSON Web Token)**
+* **REST APIs**
+* **Git & GitHub**
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 edtech-backend
 │
-├── controllers/        # Application logic
-├── models/             # Database schemas
-├── routes/             # API routes
-├── middleware/         # Authentication and validation middleware
-├── config/             # Database configuration
-├── utils/              # Utility functions
-├── server.js           # Entry point of the application
+├── controllers      # Business logic
+├── models           # MongoDB schemas
+├── routes           # API routes
+├── middleware       # Authentication middleware
+├── config           # Database configuration
+├── server.js        # Main server file
 └── package.json
 ```
 
 ---
 
-## ⚙️ Installation and Setup
+## Installation and Setup
 
-### 1️⃣ Clone the repository
+### 1. Clone the repository
 
-```bash
+```
 git clone https://github.com/praful-verma/edtech-backend.git
 ```
 
-### 2️⃣ Navigate to the project directory
+### 2. Go to the project folder
 
-```bash
+```
 cd edtech-backend
 ```
 
-### 3️⃣ Install dependencies
+### 3. Install dependencies
 
-```bash
+```
 npm install
 ```
 
-### 4️⃣ Configure Environment Variables
+### 4. Create a `.env` file
 
-Create a `.env` file and add the following:
+Add the following variables:
 
 ```
 PORT=5000
@@ -75,13 +75,13 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-### 5️⃣ Run the server
+### 5. Run the server
 
-```bash
+```
 npm start
 ```
 
-The server will start on:
+The server will run on:
 
 ```
 http://localhost:5000
@@ -89,70 +89,42 @@ http://localhost:5000
 
 ---
 
-## 🔐 Authentication System
+## Authentication
 
-The platform uses **JWT (JSON Web Tokens)** to secure API endpoints.
+This project uses **JWT authentication**.
 
-* Users receive an **access token** after successful login.
-* Protected routes require a valid token.
-* Middleware verifies the token before allowing access.
+After login, the server generates a **token** which is required to access protected routes. Middleware is used to verify the token before allowing access to APIs.
 
 ---
 
-## 👥 User Roles
+## User Roles
 
-The system supports **role-based authorization**:
+### Student
 
-* **Student**
+* View courses
+* Access learning materials
 
-  * View courses
-  * Access learning content
+### Instructor
 
-* **Instructor**
-
-  * Create courses
-  * Manage learning materials
-  * Update course content
+* Create courses
+* Update course content
+* Manage learning materials
 
 ---
 
-## 📡 API Endpoints (Example)
+## Future Improvements
 
-| Method | Endpoint             | Description       |
-| ------ | -------------------- | ----------------- |
-| POST   | `/api/auth/register` | Register new user |
-| POST   | `/api/auth/login`    | User login        |
-| GET    | `/api/courses`       | Get all courses   |
-| POST   | `/api/courses`       | Create new course |
-| GET    | `/api/users`         | Get user details  |
-
----
-
-## 📈 Future Improvements
-
-* Video lecture upload support
-* Assignment and quiz modules
+* Add video lectures
+* Assignment and quiz system
 * Course progress tracking
-* Notification system
-* Admin dashboard
-* Payment gateway integration
+* Admin panel
+* Payment integration
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork the repository and submit a pull request.
-
----
-
-## 📧 Contact
+## Author
 
 **Praful Verma**
 
-* GitHub: https://github.com/praful-verma
-* Email: [vpraful007@gmail.com](mailto:vpraful007@gmail.com)
-
----
-
-⭐ If you find this project helpful, please give it a **star** on GitHub.
+GitHub: https://github.com/praful-verma
+Email: [vpraful007@gmail.com](mailto:vpraful007@gmail.com)
