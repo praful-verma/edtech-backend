@@ -31,17 +31,14 @@ The goal of this project was to build a **scalable and secure backend using Node
 
 ## Project Structure
 
-```
-edtech-backend
-│
-├── controllers      # Business logic
-├── models           # MongoDB schemas
-├── routes           # API routes
-├── middleware       # Authentication middleware
-├── config           # Database configuration
-├── server.js        # Main server file
-└── package.json
-```
+Important folders in the project:
+
+- **controllers** – Contains the main application logic  
+- **models** – MongoDB schemas for users and courses  
+- **routes** – API route definitions  
+- **middleware** – Authentication and request validation  
+- **config** – Database configuration files  
+- **server.js** – Entry point of the backend server
 
 ---
 
